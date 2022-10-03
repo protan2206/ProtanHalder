@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", sans-serif;
@@ -6,52 +6,66 @@
   text-decoration: none;
 }
 
-body{
-  
-  background: url(img/bg.jpg) no-repeat center;
-  background-size: cover;
+body {
+
+  background: url(img/background.jpg);
+  background-size: 100vw 100vh;
   display: flex;
+  
+  
+ 
   align-items: center;
   justify-content: center;
+  object-fit: cover;
+  font-size: 10px;
+  padding-top: 10px;
 }
 
-.profile-card{
-  width: 400px;
+.profile-card {
   text-align: center;
   border-radius: 8px;
   overflow: hidden;
 }
 
-.card-header{
-  background: #2c3a47;
-  padding: 60px 40px;
+.card-header {
+  width: 344px;
+  height: 590px;
+  /* background: #2c3a47; */
+  background: url(img/picture_background.jpg);
+  /* object-fit: none; */
+  padding: 60px 0px;
+  background-size: cover;
 }
 
-.pic{
+.pic {
   display: inline-block;
   padding: 8px;
-  background: linear-gradient(130deg, #4e93d8, #e66767);
+  background: linear-gradient(130deg, rgb(32,1,62), #1c7ea581);
   margin: auto;
   border-radius: 10%;
   background-size: 150% 200%;
   animation: animated-gradient 2s linear infinite;
 }
 
-@keyframes animated-gradient{
-  25%{
+@keyframes animated-gradient {
+  25% {
     background-position: left bottom;
   }
-  50%{
+
+  50% {
     background-position: right bottom;
   }
-  75%{
+
+  75% {
     background-position: right top;
   }
-  100%{
+
+  100% {
     background-position: left top;
   }
 }
-.pic .image{
+
+.pic .image {
   background: url("img/2.JPEG") no-repeat center;
   background-size: cover;
   display: flex;
@@ -62,194 +76,76 @@ body{
   border-radius: 15px;
   animation: slider 10s infinite linear;
 }
-.name{
+
+.name {
   color: #f2f2f2;
-  font-size: 28px;
+  font-size: 1.3rem;
   font-weight: 600;
   margin: 10px 0;
 }
 
-.desc{
+.desc {
   font-size: 18px;
-  color: #e66767;
+  color: #050505;
 }
 
-.sm{
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-  
+.phn-mail {
+  display:flex;
 }
-.phn-mail{
-  
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left:0px;
-  margin-top: 10px;
-}
-.phn-mail-box{
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-.phn-mail-box h4{
-  margin-top: 9px;
-  margin-right: 10px;
 
-  color: #d2d8dd;
+ .phn-mail h4 { 
+  font-size: 1rem;
+  color: #000407;
+  margin-top: 1px;
 }
-.phn-mail .phn-mail-box .phn-mail-box-call{
-  display: inline-block;
-  font-size: 10px;
-  padding: 6px 6px;
-  color: #e66767;
-  border: 1px solid #e66767;
-  border-radius: 6px;
-  /* margin-top: 16px; */
-  transition: .3s linear;
-}
-.phn-mail-box a{
+.phn-mail .mail {
   color: #f2f2f2;
   width: 56px;
   font-size: 22px;
+  /* margin-top: ; */
   transition: .3s linear;
-  margin-block: 5px;
 }
 
-.phn-mail a:hover{
-  color: #e66767;
+.phn-mail a:hover {
+  color: #0a0101;
 }
-.sm a{
+.primary{
+  display: flex;
+  position: absolute; 
+  top: 29rem;
+}
+.secondary{
+  display: flex;
+  position: absolute;
+  top: 33rem;
+}
+.sm {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(127, 255, 212, 0);
+  height: 50px;
+  width: 344px;
+  border: 3px solid #73ad2100;
+}
+
+.sm a {
   color: #f2f2f2;
-  width: 100px;
+  flex-grow: 1;
   font-size: 30px;
   transition: .3s linear;
 }
 
-.sm a:hover{
+.sm a:hover {
   color: #e66767;
   font-size: 40px;
 }
 
-.contact-Protan .call-msg{
-  padding-inline: 0px;
-}
-
-
-.fb-page{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.fb-page h3{
-  color: rgb(163, 195, 214);
-}
-.fb-page a{
-  display: inline-block;
-  padding: 12px 80px;
-  color: #6f8ad4;
-  font-weight: bolder;
-  border: 2px solid #6f8ad4;
-  border-radius: 6px;
-  margin-top: 16px;
-  transition: .3s linear;
-}
-.fb-page a:hover{
-  background: #6f8ad4;
-  color: #f2f2f2;
-  padding: 12px 80px;
-  font-weight: bold;
-}
-.contact-btn{
-  display: inline-block;
-  padding: 12px 62px;
-  color: #e66767;
-  border: 2px solid #e66767;
-  border-radius: 6px;
-  margin-top: 16px;
-  transition: .3s linear;
-}
-
-.contact-btn:hover{
-  background: #e66767;
-  color: #f2f2f2;
-}
-.contact{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.contact .call-msg{
-  display: flex;
-  height:40px;
-  width: 112px;
-  color: #6cca83;
-  font-weight: bolder;
-  border: 2px solid #6cca83;
-  border-radius: 6px;
-  margin-top: 16px;
-  margin-inline: 5px;
-  transition: .3s linear;
-  align-items: center;
-  justify-content: center;
-  
-}
-.contact .call-msg:hover{
-  background: #6cca83;
-  color: #313131;
-  /* padding: 12px px; */
-  font-weight: bold;
-}
-.contact .wa-me{
-  display: flex;
-  height:40px;
-  width: 112px;
-  color: #e66767;
-  font-weight: bolder;
-  border: 2px solid #e66767;
-  border-radius: 6px;
-  margin-top: 16px;
-  margin-inline: 5px;
-  transition: .3s linear;
-  align-items: center;
-  justify-content: center;
-  
-}
-.contact .wa-me:hover{
-  background: #e66767;
-  color: #313131;
-  /* padding: 12px px; */
-  font-weight: bold;
-}
-.card-footer{
+.card-footer {
   background: #f4f4f4;
-  padding: 20px 10px;
+  padding: 10px 10px;
   font-size: 10px;
 }
-.download{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-.download a{
-  color: aqua;
-  border: 2px solid aqua;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-weight: bolder;
-  transition: 0.2s linear;
-
-}
-.download a:hover{
-  color: rgb(43, 42, 42);
-  background-color: aqua;
-  font-weight: bolder;
-}
-
-
-
-
-
